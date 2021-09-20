@@ -1,0 +1,35 @@
+/*Colors*/
+
+/* dark blue #1E3F65 */
+/* secondary blue #2B5682 */
+/* dark grey */
+/* grey for hovers #848484 */
+/* light background: white */
+/* dark background: ##58595A */
+
+
+
+body{
+	background: #1E3F65;
+}
+
+/* nav icon */
+.nav-icon.active, .content{
+ 	background: #58595a;
+}
+
+#main.light .content, #main.light .nav-icon.active{
+	background: white;
+}
+
+#top-bars .menu{
+	background: #295584;
+}
+
+#main.light .sidebar, #main.light #left-nav .nav-icon.active, #left-nav .sidebar, #left-nav .nav-icon.active{
+	background: #2B5682;
+}
+
+#main.light #top-bars .sidebar{
+	background: #1E3F65;
+}

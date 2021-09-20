@@ -1,0 +1,63 @@
+/***** TYPOGRAPHY *****/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1, h2, h3, h4{
+  font-weight: 300;
+}
+
+h5, h6{
+  font-weight: 400;
+}
+
+h1, .h1 {
+  font-size: 2.5rem;
+  font-size: 3.5vw;
+  /* fluid font!! */
+  /* min-font: 30px max-font:40px */
+  /* smallest viewport 300px largest viewport 2560 */
+  font-size: calc(30px + (40 - 30) * ((100vw - 300px) / (2560 - 300)));
+
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.nav-icon.active:hover{
+  color: #848484;
+}
+
+.nav-icon.disabled{
+  color: #808182;
+  pointer-events: none;
+}
+
+.nav-icon.disabled:hover{
+  color: #808182;
+}
+
+#main.light .content, #main.light .menu .nav-icon, #main.light #left-nav .nav-icon.active{
+  color: white;
+}
+
+#main.light .content, #main.light .nav-icon.active{
+  color: #204064;
+}
+
+.nav-icon:hover{
+  color: #848484!important;
+}

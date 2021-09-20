@@ -1,0 +1,290 @@
+
+/***** LAYOUT USING GRID /*****/
+body{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: 
+    "main info";
+}
+
+.grid{
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  transition: all .5s;
+}
+
+/* Left Nav Option*/
+.left-nav{
+  grid-template-rows: auto 1fr;
+  grid-template-areas: 
+    "header"
+    "menu content";
+}
+
+.left-nav.two-column-left-nav{
+  grid-template-rows: auto 1fr;
+  grid-template-areas: 
+    "header"
+    "menu sidebar content";
+}
+
+.left-nav .menu{
+  display: grid;
+  grid-column: span content-fit;
+}
+
+.left-nav .sidebar{
+  display: none;
+}
+
+.left-nav.two-column-left-nav .sidebar.active{
+  display: block;
+  grid-column: span 3;
+}
+
+.left-nav .content{
+  grid-column: span 11;
+}
+
+.left-nav.two-column-left-nav .content{
+  grid-column: span 8;
+}
+
+.left-nav .nav-icon{
+  display: grid;
+  grid-gap: .2em;
+  grid-template-areas: 
+    "nav-icon"
+    "nav-title";
+  justify-content: center;
+}
+
+.left-nav .nav-icon i{
+  text-align: center;
+}
+
+.left-nav .nav-icon i{
+  align-self: end;
+}
+
+/* Top Bars Option*/
+.top-bars{
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas: 
+    "header"
+    "menu"
+    "content";
+}
+
+.top-bars.top-bars-with-left-column{
+  grid-template-rows: auto auto 1fr;
+  grid-template-areas: 
+    "header"
+    "menu"
+    "sidebar content";
+}
+
+.top-bars .menu{
+  grid-column: span 12;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #365C89;
+}
+
+.top-bars .sidebar{
+  display: none;
+}
+
+.top-bars.top-bars-with-left-column .sidebar.active{
+  display: block;
+  grid-column: span 2;
+}
+
+.top-bars .nav-icon{
+  display: grid;
+  padding: .5em;
+  grid-gap: 1em;
+  grid-template-rows: content-fit content-fit;
+  grid-template-areas: "nav-icon nav-title";
+  justify-content: start;
+  align-items: center;
+}
+
+.top-bars .content{
+  grid-column: span 12;
+  overflow: hidden;
+}
+
+.top-bars.top-bars-with-left-column .content{
+  grid-column: span 10;
+}
+
+/* Generic Layout */
+#main{
+  width: 100vw;
+  transition: all .5s;
+}
+
+#mySidenav{
+  width: 250px;
+  display: none;
+  transition: all .5s;
+  padding: 1em;
+}
+
+#mySidenav h6{
+  text-align: center;
+  text-decoration: underline;
+}
+
+.header{
+  display: grid;
+  padding: 1em;
+  grid-column: span 12;
+  grid-row: 1;
+  grid-gap: 1em;
+  grid-template-columns: 1fr 9fr 1fr;
+  grid-template-areas: 
+    "logo title info";
+}
+
+.header .logo{
+  grid-column: span 1;
+  align-self: center;
+}
+
+.header .title{
+  grid-column: span 1;
+  align-self: center;
+}
+
+.header .info{
+  display: grid;
+  padding: 1em;
+  grid-column: span 1;
+  align-self: center;
+  justify-content: end;
+}
+
+.info.nav-icon{
+  padding: 0!important;
+  justify-content: center;
+}
+
+.info.nav-icon i{
+  text-align: center;
+}
+
+.sidebar{
+  padding: 1em;
+}
+
+.content{
+  display: none;
+  transition: all .5s;
+}
+
+.content.active{
+  display: block;
+  transition: all .5s;
+  height:100%;
+}
+
+#NEChart{
+  height: 100%;
+  width: 70%;
+  float:left;
+  background-color: white;
+  border: 5px #bbbbbb solid;
+}
+
+#displayData{
+  height: 100%;
+  width: 30%;
+  float: right;
+  background-color: white;
+  border: 5px #bbbbbb solid;
+  border-left: 0px;
+}
+.greyBG{
+  height: 100%;
+  width: 100%;
+  background-color: #bbbbbb;
+  clear:both;
+}
+#NEContent{
+  height: 85%;
+  width: 100%;
+  background-color: white;
+}
+
+#NEHeader{
+  background-color: #1E3F65;
+  padding-left: 1em;
+  color: white;
+}
+
+.lightBlueMenu{
+  position: relative;
+  background-color: #365C89;
+  width: 100%;
+  min-height: 2em;
+  padding-top: .125em;
+  overflow: hidden;
+  color: white;
+}
+
+#detailHeader{
+  padding-left: 1em;
+  color: white;
+  background-color: #1E3F65;
+}
+
+#NEMLeft{
+  float:left;
+  padding-left: 1em;
+}
+
+#NEMRight{
+  float:right;
+  padding-right: 1em;
+}
+
+.leftAlign{
+  float:left;
+  padding-left: 1em;
+}
+
+.rightAlign{
+  float:right;
+  padding-right: 1em;
+}
+
+#legendContainer{
+  position:absolute;
+  z-index: 1;
+}
+
+#legendList{
+  list-style-type: none;
+  background-color: white;
+  margin:0;
+  padding:0;
+}
+
+.floatRight{
+  float:right;
+}
+
+.disabled{
+  display:none;
+}
+
+.enabled{
+  display:block;
+}
+
+.wrap{
+  padding: 1em;
+}

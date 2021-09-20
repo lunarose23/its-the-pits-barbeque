@@ -1,0 +1,48 @@
+/* Specialized Layout */
+.logo img{
+  max-width: 300px;
+}
+
+.nav-icon{
+  cursor: pointer;
+}
+
+#left-nav .nav-icon{
+  border-radius: 5px 0 0 5px;
+}
+
+
+/* Specialized Typograpy */
+.header h1, .nav-icon p{
+  margin-bottom: 0;
+}
+
+
+/* Side Nav */
+
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    right: 0;
+    background-color: #1a3756; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.border-bottom{
+  padding-bottom: 4px;
+  border-bottom: 1px solid white;
+}
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="description" content="App">
+  <title class="webAppName">STR | {{projectName}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% assets 'css_all' %}
+      <link rel="stylesheet" type="text/css" href="{{ ASSET_URL }}"></script>
+  {% endassets %}
+</head>
+
+<body>
+  <div id="main" class="{{colorTheme}}">
+    <div class="grid layoutOption {{webLayout}}">
+      <!-- partials -->
+     {% block navigation %}{% endblock %}
+     {% block sidebar %}{% endblock %}
+     {% block content %}{% endblock %}
+    </div>
+  </div>
+  <div id="mySidenav" class="info-nav">
+    <h6>Information</h6>
+  </div>
+
+ 
+  <script type=text/javascript>
+        /* URL needed for Flask requests */
+        $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+  </script>
+
+
+
+</body>
+
+</html>
+
